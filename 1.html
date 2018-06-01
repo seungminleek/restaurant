@@ -3,7 +3,7 @@
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ming_resto</title>
+  <title>ming_restaurant</title>
   <style>
 	body{ margin:0; font-family:"Times New Roman";}
 	body, html {height: 100%;color: #777;}
@@ -25,7 +25,6 @@
 	#menu{margin-bottom:100px;}
 	#contact{margin-top:100px;}
    </style>
-
 	<script>
 	var myTimer = setInterval(myClock, 1000);
 	var ex=[,,,, ,];
@@ -45,7 +44,7 @@
  </head>
  <body>
  <div class="box padding">
- 	<h4><a href="#home">ming's resto</a>
+ 	<h4><a href="#home">ming's restaurant</a>
 	  <a href="#contact" class="bar">Contact</a>
 	  <a href="#menu" class="bar">Menu</a>
 	  <a href="#about" class="bar">About</a></h4>
@@ -54,18 +53,18 @@
   <div id="about" class="padding2 content">
   	<img src="img/cafe.jpg" class="image" width="600" height="750" >
 	<div class="col">
-		<h1>About Catering</h1><br>
+		<h1 style="color:brown;">About Catering</h1><br>
 		<h4>since 1889<br>
 		open 11:00 ~ 22:00 <br></h4>
 		<h2>What time is it?</h2>
-		<h4><p id="time"></p></h4>
+		<h4><p id="time" style="color:brown;"></p></h4>
 	</div>
   </div>
   <hr>
 
   <div id="menu" class="padding2 content">
 	<div class="row">
-  	  <h1>Our Menu</h1><br>
+  	  <h1 style="color:brown;">Our Menu</h1><br>
 	  <h4><button class="mbutton button" onclick="btneft1()">Bread Basket</button> 
       <button class="mbutton button" onclick="btneft2()">Honey Almond</button>   
       <button class="mbutton button" onclick="btneft3()">Belgian Waffle</button> 
@@ -82,17 +81,17 @@
   </div>
 
 	<div id="contact" class="padding2 content">
-		<h1>Contact</h1><br>
-		<p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p><br>
-		<form action="reserve.html" target="_blank">
+		<h1 style="color:brown;">Contact</h1>
+		<p><a href="form.php" target="_blank"><button class="button mbutton"><h3>Reservation<br>in php form</h3></button></a></p>
+		<p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.<br>Fill out your inqurement.</p>		
+		<form>
 			<p><input class="input" id="name" type="text" placeholder="Name"></p>
-			<p><input class="input" id="num"type="number" placeholder="How many people"></p>
-			<p><input class="input" id="dat"type="datetime-local" placeholder="Date and time" value="2018-05-27T20:00"></p>
+			<p><input class="input" id="phone" type="number" placeholder="Your phone number"></p>
 			<p><input class="input" id="req" type="text" style="padding-top:16px!important;padding-bottom:16px!important" placeholder="Message \ Special requirements"></p>
-			<p><button class="button mbutton" onclick="submit()">Reserve</p>
+			<p><button class="button mbutton" onclick="alert('문의해주셔서 감사합니다.')" style="float:right;">submit</button></p>
 		</form>
+		<h4><a href="https://goo.gl/maps/JkYKWBVXqe72" style="color:brown;"><u>The map of our restaurant<u></a></h4>
 	</div>
 	<hr>
-	<div id="오시는길">
  </body>
 </html>
