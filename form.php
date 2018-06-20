@@ -15,19 +15,19 @@ $name = $date = $gender = $comment = $people = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   if (empty($_POST["name"])) {
-    $nameErr = "Name is required";
+    $nameErr = "이름은 필수입니다.";
   } else {
     $name = test_input($_POST["name"]);
   }
   
   if (empty($_POST["date"])) {
-    $dateErr = "Date is required";
+    $dateErr = "시간을 입력하세요.";
   } else {
     $date = test_input($_POST["date"]);
   }
     
   if (empty($_POST["people"])) {
-    $peopleErr = "how many people?";
+    $peopleErr = "숫자로 입력하세요.";
   } else {
     $people = test_input($_POST["people"]);
   }
@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   if (empty($_POST["gender"])) {
-    $genderErr = "Gender is required";
+    $genderErr = "";
   } else {
     $gender = test_input($_POST["gender"]);
   }
@@ -53,7 +53,7 @@ function test_input($data) {
 }
 ?>
 
-<h2> Reservation Page</h2>
+<h2>고객용 예약 페이지</h2>
 <p><span class="error">* required field</span></p>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
   Name: <input type="text" name="name" value="<?php echo $name;?>">
@@ -73,8 +73,7 @@ function test_input($data) {
   <input type="radio" name="gender" <?php if (isset($gender) && $gender=="children") echo "checked";?> value="children">children  
   <span class="error"> <?php echo $genderErr;?></span>
   <br><br>
-  <input type="submit" name="submit" value="Submit">  
-</form>
+  <input type="submit" name="submit" value="Submit" onclick="alert('예약이 완료되었습니다. 감사합니다.');">
 
 <?php
 echo "<h2>Your Reservation:</h2>";
@@ -84,7 +83,11 @@ echo $date;
 echo "<br>";
 echo $people;
 echo "<br>";
-echo "<h3>>>> Complated reservation, thank you.</h3>";
+echo $comment;
+echo "<br>";
+echo $gender;
+echo "<br>";
+echo "<hr>";
 ?>
 
 </body>
