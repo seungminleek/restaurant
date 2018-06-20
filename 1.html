@@ -20,8 +20,9 @@
 	.row{float:left;width:100%;text-align:center!important;width:49.99999%;text-decoration:none}
 	.grey{color:#757575!important}
 	.input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
-	.button{border:none;display:inline-block;vertical-align:middle;padding-top:10px;margin-top:16px!important;margin-bottom:16px;width:150px}
-	.mbutton:hover{width:150px;background-color:#795548!important;}
+	.button{border:none!important;display:inline-block;vertical-align:middle;padding-top:10px;padding-bottom:10px;margin-top:16px;margin-bottom:16px;width:150px}
+	.mbutton:hover{width:150px;background-color:blueviolet!important;}
+    .rbutton:hover{border:1px inset!important;width:150px;background-color:white!important;}
 	#menu{margin-bottom:100px;}
 	#contact{margin-top:100px;}
    </style>
@@ -29,7 +30,6 @@
 	var myTimer = setInterval(myClock, 1000);
 	var ex=[,,,, ,];
 	var i=0;
-
 	function myClock() {
     document.getElementById("time").innerHTML =
     new Date().toLocaleTimeString();}
@@ -44,7 +44,7 @@
  </head>
  <body>
  <div class="box padding">
- 	<h4><a href="#home">ming's restaurant</a>
+ 	<h4><a href="#home" style="color:blueviolet;">bistecca restaurant</a>
 	  <a href="#contact" class="bar">Contact</a>
 	  <a href="#menu" class="bar">Menu</a>
 	  <a href="#about" class="bar">About</a></h4>
@@ -53,24 +53,24 @@
   <div id="about" class="padding2 content">
   	<img src="img/cafe.jpg" class="image" width="600" height="750" >
 	<div class="col">
-		<h1 style="color:brown;">About Catering</h1><br>
+		<h1 style="color:blueviolet;">About Catering</h1><br>
 		<h4>since 1889<br>
 		open 11:00 ~ 22:00 <br></h4>
-		<h2>What time is it?</h2>
-		<h4><p id="time" style="color:brown;"></p></h4>
+		<h6>(예약은 40분전부터 가능합니다.)</h6><h3>현재 시간 확인</h3>
+		<h4><u style="color:blueviolet;"><p id="time" style="color:blueviolet;"></p></u></h4>
 	</div>
   </div>
   <hr>
 
   <div id="menu" class="padding2 content">
 	<div class="row">
-  	  <h1 style="color:brown;">Our Menu</h1><br>
+  	  <h1 style="color:blueviolet;">Our Menu</h1><br>
 	  <h4><button class="mbutton button" onclick="btneft1()">Bread Basket</button> 
       <button class="mbutton button" onclick="btneft2()">Honey Almond</button>   
       <button class="mbutton button" onclick="btneft3()">Belgian Waffle</button> 
       <button class="mbutton button" onclick="btneft4()">Scrambled eggs</button>  
       <button class="mbutton button" onclick="btneft5()">Blueberry Pancakes</button></h4><br><br>
-	  <h3>Introduction and Price</h3>
+	  <h3>메뉴 이름을 클릭해 보세요.</h3>
       <p id="1" class="grey"></p>  
     </div>
 	<div class="col">
@@ -81,8 +81,8 @@
   </div>
 
 	<div id="contact" class="padding2 content">
-		<h1 style="color:brown;">Contact</h1>
-		<p><a href="form.php" target="_blank"><button class="button mbutton"><h3>Reservation<br>in php form</h3></button></a></p>
+		<h1 style="color:blueviolet;">Contact</h1>
+		<p><a href="form.php" target="_blank"><button class="button rbutton" style="float:right;background-color:blueviolet;border:none;"><h3>Reservation<br>in php form</h3></button></a></p>
 		<p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.<br>Fill out your inqurement.</p>		
 		<form>
 			<p><input class="input" id="name" type="text" placeholder="Name"></p>
@@ -90,7 +90,7 @@
 			<p><input class="input" id="req" type="text" style="padding-top:16px!important;padding-bottom:16px!important" placeholder="Message \ Special requirements"></p>
 			<p><button class="button mbutton" onclick="alert('문의해주셔서 감사합니다.')" style="float:right;">submit</button></p>
 		</form>
-		<h4><a href="https://goo.gl/maps/JkYKWBVXqe72" style="color:brown;"><u>The map of our restaurant<u></a></h4>
+		<h4><a href="https://goo.gl/maps/JkYKWBVXqe72" style="color:blueviolet;"><u>레스토랑 위치 확인하기<u></a></h4>
 	</div>
 	<hr>
  </body>
